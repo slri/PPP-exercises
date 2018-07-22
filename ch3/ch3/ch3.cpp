@@ -39,7 +39,7 @@ void tt3()
 	string previous = " "; // previous word; initialized to "not a word"
 	string current; // current word
 	int counter = 0;
-	while (cin >> current) { // read a stream of words
+	while (cin >> current) { // read a stream of words, don't forget to Ctrl + Z
 		if (previous == current) { // check if the word is the same as last
 			cout << "repeated word: " << current << '\n';
 			counter++;
@@ -48,9 +48,31 @@ void tt3()
 		previous = current;
 	}
 	cout << "repeated word counter: " << counter << '\n';
-
+	// operator == when comparing 2 *identical* strings will yield true (==)
 }
 
+int tt4() //main function actually has to be all lowercase and when you typehint a return value you have to return exactly that
+{
+	string s = "Goodbye, cruel world! ";
+	cout << s << '\n';
+
+	return 0;
+}
+
+void tt5()
+{
+	double d = 0;
+	while (cin >> d) { // repeat the statements below
+					   // as long as we type in numbers
+		int i = d; // try to squeeze a double into an int
+		char c = i; // try to squeeze an int into a char
+		int i2 = c; // get the integer value of the character
+		cout << "d==" << d // the original double
+			<< " i==" << i // converted to int
+			<< " i2==" << i2 // int value of char
+			<< " char(" << c << ")\n"; // the char
+	} //50 and -22222 produce the same char (2), how???
+}
 
 // TIL if you're gonna reference anything, you better have the declarations at the top. php is the superior language here
 int main()
@@ -63,7 +85,9 @@ int main()
 
 	//tt1();
 	//tt2();
-	tt3();
+	//tt3();
+	//tt4();
+	tt5();
 
 	keep_window_open();
 	return 0;
