@@ -36,7 +36,7 @@ void tt2()
 
 void tt3()
 {
-	string previous = " "; // previous word; initialized to gnot a wordh
+	string previous = " "; // previous word; initialized to "not a word"
 	string current; // current word
 	int counter = 0;
 	while (cin >> current) { // read a stream of words
