@@ -24,7 +24,7 @@ int main()
 	cout << "Letter:\n"
 		<< "Dear " << first_name << ",\n"
 		<< "\tHow are you? I am fine. I miss you. The world is bleak without you around and I'm not just saying that because I'm thirsty.\n"
-		<< "If you see " << friend_name << " please ask " << ((friend_sex == 'f') ? "her" : "him") << " to call me.\n"; //why does this not work, tell me
+		<< "If you see " << friend_name << " please ask " << ((friend_sex == 'f') ? "her" : "him") << " to call me.\n";
 	
 	if(age < 12) {
 		cout << "Next year you will be " << age + 1;

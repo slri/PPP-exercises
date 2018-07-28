@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "../../include/std_lib_facilities.h"
 
-void tt1()
+void ageInMonths()
 {
 	string name;
 	double age;
@@ -17,7 +17,7 @@ void tt1()
 	cout << "Hello, " << name << ". You're " << age << " years old which is " << age * 12 << " months.\n";
 }
 
-void tt2()
+void operatorsAndSqareRoot()
 {
 	cout << "Please enter a positive integer value: ";
 	int n;
@@ -34,12 +34,12 @@ void tt2()
 		<< '\n';
 }
 
-void tt3()
+void repeatedWordCounter()
 {
 	string previous = " "; // previous word; initialized to "not a word"
 	string current; // current word
 	int counter = 0;
-	while (cin >> current) { // read a stream of words, don't forget to Ctrl + Z
+	while (cin >> current) { // read a stream of words, don't forget to Ctrl + Z on windows
 		if (previous == current) { // check if the word is the same as last
 			cout << "repeated word: " << current << '\n';
 			counter++;
@@ -48,10 +48,10 @@ void tt3()
 		previous = current;
 	}
 	cout << "repeated word counter: " << counter << '\n';
-	// operator == when comparing 2 *identical* strings will yield true (==)
+	// operator == when comparing 2 *identical* strings will yield true
 }
 
-int tt4() //main function actually has to be all lowercase and when you typehint a return value you have to return exactly that
+int testTypehintAndNaming() //main function actually has to be all lowercase and when you typehint a return value you have to return exactly that
 {
 	string s = "Goodbye, cruel world! ";
 	cout << s << '\n';
@@ -59,7 +59,7 @@ int tt4() //main function actually has to be all lowercase and when you typehint
 	return 0;
 }
 
-void tt5()
+void unsafeCharConversion()
 {
 	double d = 0;
 	while (cin >> d) { // repeat the statements below
@@ -74,20 +74,14 @@ void tt5()
 	} //50 and -22222 produce the same char (2), how???
 }
 
-// TIL if you're gonna reference anything, you better have the declarations at the top. php is the superior language here
+// TIL if you're gonna reference anything, you better have the declarations at the top
 int main()
 {
-	//TODO: helper function, preferrably in a separate file in include/,
-	//range-based for to ask the user if they wanna run the function or quit
-	//the program. it'd pick off of a list of "known" functions and that
-	//doesn't really have to be generated, can just manually list it out.
-	//prompts gotta be automated tho. would make this much more presentable.
-
-	//tt1();
-	//tt2();
-	//tt3();
-	//tt4();
-	tt5();
+	//ageInMonths();
+	//operatorsAndSqareRoot();
+	//repeatedWordCounter();
+	//testTypehintAndNaming();
+	unsafeCharConversion();
 
 	keep_window_open();
 	return 0;
