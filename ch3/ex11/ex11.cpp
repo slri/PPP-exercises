@@ -21,11 +21,11 @@ int main()
 	cout << "Half dollars:\n";
 	cin >> hdollars;
 
-	cout << "You have " << pennies << (pennies < 2 ? " penny" : " pennies") << "\n"; //cba to write it in ifs and elses, this is just much faster
-	cout << "You have " << nickels << (nickels < 2 ? " nickel" : " nickels") << "\n";
-	cout << "You have " << dimes << (dimes < 2 ? " dime" : " dimes") << "\n";
-	cout << "You have " << quarters << (quarters < 2 ? " quarter" : " quarters") << "\n";
-	cout << "You have " << hdollars << (hdollars < 2 ? " half dollar" : " half dollars") << "\n";
+	cout << "You have " << pennies << (pennies == 1 ? " penny" : " pennies") << "\n"; //cba to write it in ifs and elses, this is just much faster
+	cout << "You have " << nickels << (nickels == 1 ? " nickel" : " nickels") << "\n";
+	cout << "You have " << dimes << (dimes == 1 ? " dime" : " dimes") << "\n";
+	cout << "You have " << quarters << (quarters == 1 ? " quarter" : " quarters") << "\n";
+	cout << "You have " << hdollars << (hdollars == 1 ? " half dollar" : " half dollars") << "\n";
 
 	cents = pennies + nickels * 5 + dimes * 10 + quarters * 25 + hdollars * 50;
 
